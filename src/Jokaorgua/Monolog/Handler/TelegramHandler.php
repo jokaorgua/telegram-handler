@@ -1,6 +1,6 @@
 <?php
 
-namespace Mero\Monolog\Handler;
+namespace Jokaorgua\Monolog\Handler;
 
 use Monolog\Handler\MissingExtensionException;
 use Monolog\Handler\SocketHandler;

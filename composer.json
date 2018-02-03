@@ -28,12 +28,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Mero\\Monolog\\": "src/Jokaorgua/Monolog"
+      "Jokaorgua\\Monolog\\": "src/Jokaorgua/Monolog"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Mero\\Monolog\\": "tests/Jokaorgua/Monolog"
+      "Jokaorgua\\Monolog\\": "tests/Jokaorgua/Monolog"
     }
   },
   "extra": {
