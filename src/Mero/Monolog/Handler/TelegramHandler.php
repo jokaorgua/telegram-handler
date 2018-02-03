@@ -26,6 +26,10 @@ class TelegramHandler extends SocketHandler
     private $chatId;
 
     /**
+     * @var int How long we have to sleep between messages to avoid hitting telegram api limits
+     */
+    private $sleepTimeBetweenMessages = 1;
+    /**
      * @param string $token  Telegram API token
      * @param int    $chatId Chat identifier
      * @param int    $level  The minimum logging level at which this handler will be triggered
@@ -33,7 +37,7 @@ class TelegramHandler extends SocketHandler
      *
      * @throws MissingExtensionException If no OpenSSL PHP extension configured
      */
-    public function __construct($token, $chatId, $level = Logger::CRITICAL, $bubble = true)
+    public function __construct($token, $chatId, $level = Logger::CRITICAL, $bubble = true, $sleepTimeBetweenMessages = 1)
     {
         if (!extension_loaded('openssl')) {
             throw new MissingExtensionException('The OpenSSL PHP extension is required to use the TelegramHandler');
@@ -43,6 +47,7 @@ class TelegramHandler extends SocketHandler
 
         $this->token = $token;
         $this->chatId = $chatId;
+        $this->sleepTimeBetweenMessages = $sleepTimeBetweenMessages;
     }
 
     /**
@@ -103,6 +108,7 @@ class TelegramHandler extends SocketHandler
     protected function write(array $record)
     {
         parent::write($record);
+        sleep($this->sleepTimeBetweenMessages);
         $this->closeSocket();
     }
 }
