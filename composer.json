@@ -1,5 +1,5 @@
 {
-  "name": "mero/telegram-handler",
+  "name": "jokaorgua/telegram-handler",
   "description": "Monolog handler to send log by Telegram",
   "keywords": [
     "telegram",
@@ -10,13 +10,13 @@
   "type": "library",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/merorafael/telegram-handler/issues",
-    "source": "https://github.com/merorafael/telegram-handler"
+    "issues": "https://github.com/jokaorgua/telegram-handler/issues",
+    "source": "https://github.com/jokaorgua/telegram-handler"
   },
   "authors": [
     {
-      "name": "Rafael Mello",
-      "email": "merorafael@gmail.com"
+      "name": "Dmitry Kovalenko",
+      "email": "admin@joka.org.ua"
     }
   ],
   "require": {
@@ -28,12 +28,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Mero\\Monolog\\": "src/Mero/Monolog"
+      "Mero\\Monolog\\": "src/Jokaorgua/Monolog"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Mero\\Monolog\\": "tests/Mero/Monolog"
+      "Mero\\Monolog\\": "tests/Jokaorgua/Monolog"
     }
   },
   "extra": {

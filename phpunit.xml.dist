@@ -6,12 +6,12 @@
     </logging>
     <testsuites>
         <testsuite name="TelegramHandler Test Suite">
-            <directory>./tests/Mero/Monolog/</directory>
+            <directory>./tests/Jokaorgua/Monolog/</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
-            <directory suffix=".php">./src/Mero/Monolog/</directory>
+            <directory suffix=".php">./src/Jokaorgua/Monolog/</directory>
         </whitelist>
     </filter>
     <php>
