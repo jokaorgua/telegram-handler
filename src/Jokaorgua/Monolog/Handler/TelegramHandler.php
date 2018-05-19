@@ -76,6 +76,7 @@ class TelegramHandler extends SocketHandler
         $dataArray = [
             'chat_id' => $this->chatId,
             'text' => $record['formatted'],
+            'parse_mode' => 'HTML'
         ];
 
         return json_encode($dataArray);
